@@ -1,0 +1,1 @@
+# cwd_switcher.nvim
