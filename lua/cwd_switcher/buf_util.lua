@@ -3,7 +3,6 @@ local M = {}
 --- @return boolean
 M.close_open_buffers = function()
     for _, bufnr in ipairs(vim.api.nvim_list_bufs()) do
-        print(vim.inspect(vim.api.nvim_buf_get_name(bufnr)))
 
         if vim.api.nvim_buf_get_option(bufnr, "modified") then
             local choice = vim.fn.confirm("This buffer has unsaved changes. close anyway?", "&Yes\n&No", 2)

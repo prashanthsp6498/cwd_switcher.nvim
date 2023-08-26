@@ -55,7 +55,6 @@ M._change_to_this = function()
     local is_close_success = buf_util.close_open_buffers()
 
     if is_close_success then
-        P(marked_path)
         local success, err = pcall(function()
             local target_dir = vim.fn.fnameescape(tostring(marked_path[path_idx]))
             vim.api.nvim_set_current_dir(tostring(target_dir))
